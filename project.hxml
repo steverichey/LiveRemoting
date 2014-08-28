@@ -1,0 +1,22 @@
+# Enable debugging
+# -debug
+
+# Add source directory to class path
+-cp src
+
+# Create JavaScript file
+-main JsMain
+-js bin/remoting.js
+
+# Move to next compilation
+--next
+
+-cp src
+
+# Create Flash file
+-main FlashMain
+-swf bin/remoting.swf
+
+# Copy HTML file
+-cmd "echo Copying html file..."
+-cmd "copy src\index.html bin\ /Y"
